@@ -1,38 +1,65 @@
-.App {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: rgb(104, 104, 104);
+}
+h1 {
   text-align: center;
+  margin-top: 20px;
+  color: aliceblue;
+}
+form {
+  position: fixed;
+  top: 20%;
+  left: 16%;
+  right: 16%;
+  border-radius: 8px;
+  border: 2px solid rgb(66, 66, 180);
+  color: #000;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form .form-group .input-group input {
+  padding: 25px;
+  font-size: 1.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.items {
+  position: fixed;
+  top: 30%;
+  right: 16%;
+  left: 16%;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  height: 50%;
+  overflow-y: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-group {
+  margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.completedTodo {
+  background-color: darkgray;
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li:hover {
+  background-color: #eeeeee;
+  font-weight: 600;
+}
+
+li:hover span {
+  color: rgb(241, 64, 33);
+}
+
+.crossed {
+  text-decoration: line-through;
 }
